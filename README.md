@@ -121,3 +121,70 @@ Before you submit your solution, you need to save your progress with git.
 4. When you are ready to submit, click the ***Load Lab: Object Oriented Programming (OOP)- Part 2- Cash Register*** button in Canvas to launch CodeGrade.
   * Click on + Create Submission. Connect your repository for this lab.
   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas).
+Cash Register Application
+Overview
+
+This project implements a CashRegister class in Python that simulates basic cash register functionality for an e-commerce application.
+
+The cash register can:
+
+Add items to a customer's purchase.
+Track item quantities and prices.
+Calculate the running total.
+Apply percentage-based discounts.
+Track previous transactions.
+Void the most recent transaction.
+Validate discount percentages from 0 to 100.
+Features
+Add Items
+
+The add_item() method accepts an item name, price, and optional quantity. The quantity defaults to 1.
+
+Example:
+
+register.add_item("eggs", 1.99, 2)
+
+Discounts
+
+The discount property validates that the discount is an integer between 0 and 100.
+
+Example:
+
+register = CashRegister(20)
+register.apply_discount()
+
+
+The apply_discount() method applies the percentage discount to the current total.
+
+Void Transactions
+
+The void_last_transaction() method removes the most recently added transaction and updates the total and items list.
+
+Testing
+
+The application is tested using pytest.
+
+All provided tests pass:
+
+14 passed
+
+Technologies
+Python 3
+Object-oriented programming
+Pytest
+Git and GitHub
+Project Structure
+oop-p2-cash-register-lab/
+├── README.md
+├── pytest.ini
+└── lib/
+    ├── cash_register.py
+    └── testing/
+
+Development Workflow
+
+The Cash Register application was developed on a feature branch, tested with pytest, reviewed through a GitHub Pull Request, and merged into the main branch.
+
+Screenshot
+
+The screenshot below shows the completed test results with all 14 tests passing.
